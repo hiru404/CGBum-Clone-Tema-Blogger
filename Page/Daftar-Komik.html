@@ -1,0 +1,71 @@
+
+<!-- Header -->
+<div class="section-header">
+  <h1 style="font-size:1.3rem;padding-left:14px;position:relative;">
+    <span style="position:absolute;left:0;top:2px;bottom:2px;width:4px;background:var(--accent);border-radius:2px;"></span>
+    Daftar Komik <span class="text-muted" style="font-weight:400;font-size:0.9rem;" id="comicCount">(Memuat...)</span>
+  </h1>
+</div>
+
+<!-- Filter Form -->
+<form class="filter-bar" id="filterForm">
+  <div class="filter-group">
+    <label for="fType">Tipe</label>
+    <select name="type" id="fType">
+      <option value="">Semua</option>
+      <option value="manga">Manga</option>
+      <option value="manhwa">Manhwa</option>
+      <option value="manhua">Manhua</option>
+      <option value="pornhwa">Pornhwa</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label for="fStatus">Status</label>
+    <select name="status" id="fStatus">
+      <option value="">Semua</option>
+      <option value="ongoing">Ongoing</option>
+      <option value="tamat">Tamat</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Genre</label>
+    <div class="genre-picker" id="genrePicker">
+      <button type="button" class="genre-picker-toggle" id="genreToggle">
+        <span id="genreToggleText">Pilih genre...</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </button>
+      <div class="genre-picker-dropdown" id="genreDropdown" style="display: none;">
+        <input type="text" class="genre-picker-search" placeholder="Cari genre..." id="genreSearch">
+        <div class="genre-picker-list" id="genreList">
+          <!-- Genre list akan di-generate otomatis oleh JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-group">
+    <label for="fSort">Urutan</label>
+    <select name="sort" id="fSort">
+      <option value="latest" selected="selected">Update Terbaru</option>
+      <option value="newest">Komik Terbaru</option>
+      <option value="oldest">Komik Terlama</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label class="filter-btn-label">&nbsp;</label>
+    <button type="submit" class="btn btn-primary">Filter</button>
+  </div>
+</form>
+
+<!-- Comic Grid (Tempat komik muncul) -->
+<div class="comic-grid" id="comicGrid">
+  <div style="text-align:center; padding:40px; grid-column: 1 / -1;">Memuat data komik...</div>
+</div>
+
+<!-- Pagination -->
+<nav class="pagination pagination-compact" aria-label="Navigasi halaman" id="paginationNav" style="display:none;">
+  <span class="page-btn page-nav-prev" id="prevPage" aria-disabled="true">« Prev</span>
+  <span class="page-position" aria-current="page" id="pageInfo">Hal. 1</span>
+  <a href="#" class="page-btn page-nav-next" id="nextPage" aria-label="Halaman berikutnya">Next »</a>
+</nav>
