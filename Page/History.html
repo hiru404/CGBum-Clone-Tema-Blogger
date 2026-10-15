@@ -1,0 +1,24 @@
+
+
+  <!-- HEADER & TOTAL COUNT -->
+  <div class="section-header" style="margin-top: 10;">
+    <h1 style="font-size:1.3rem;padding-left:14px;position:relative;">
+      <span style="position:absolute;left:0;top:2px;bottom:2px;width:4px;background:var(--accent);border-radius:2px;"></span>
+      History Baca
+      <span class="text-muted" style="font-weight:400;font-size:0.9rem;" id="historyCount">(0)</span>
+    </h1>
+  </div>
+
+  <!-- GRID KOMIK -->
+  <div class="comic-grid mt-2" id="historyGrid" style="visibility: visible;"></div>
+
+  <!-- TAMPILAN JIKA HISTORY KOSONG -->
+  <div class="favorites-empty mt-3" id="historyEmpty" style="display:none; text-align:center; padding: 50px 20px;">
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--border); margin:0 auto 16px; display:block;">
+      <path d="M12 8v4l3 3"></path><circle cx="12" cy="12" r="9"></circle>
+    </svg>
+    <h2 style="color:var(--text-secondary);">Belum Ada History</h2>
+    <p style="color:var(--text-muted); margin-bottom:18px;">Riwayat akan muncul otomatis setelah kamu membuka halaman komik.</p>
+    <a href="/" class="btn btn-primary mt-2">Jelajahi Komik</a>
+  </div>
+
